@@ -6,5 +6,6 @@ public class Main {
         System.out.println("Enter amount: ");
         int usd = scanner.nextInt();
         System.out.println("Vnd: " +usd*23.865);
+       
     }
 }
