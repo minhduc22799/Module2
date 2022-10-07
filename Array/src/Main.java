@@ -8,6 +8,7 @@ public class Main {
         while (choice!=0){
             System.out.println("Menu");
             System.out.println("1. Dao nguoc phan tu");
+            System.out.println("2. Tim gia tri trong mang");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -18,6 +19,7 @@ public class Main {
                     break;
 
                 case 2:
+                        findValueInArray();
                     break;
                 case 3:
                     break;
@@ -63,6 +65,25 @@ public class Main {
         System.out.println("\nreverse in Array: ");
         for (int j = 0; j< array.length;j++){
             System.out.println(array[j]+"\t" );
+        }
+
+    }
+
+    public static void findValueInArray(){
+        Scanner input = new Scanner(System.in);
+        String[] students = {"Christian", "Michael", "Camila", "Sienna", "Tanya", "Connor", "Zachariah", "Mallory", "Zoe", "Emily"};
+        System.out.print("Enter a name student: ");
+        String input_name = input.nextLine();
+
+        boolean isExit = false;
+        for (int i =0; i<students.length; i++){
+            if (students[i].equals(input_name)){
+                System.out.println(students[i]+"o vi tri  "+ i+" trong danh sach" );
+                break;
+            }
+        }
+        if (isExit){
+            System.out.println("Khong tim thay" + input_name+"trong danh sach");
         }
 
     }
