@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -13,6 +14,7 @@ public class Main {
             System.out.println("4. Chuyen doi C sang F");
             System.out.println("5. Chuyen doi F sang C");
             System.out.println("6. Tim gia tri nho nhat");
+            System.out.println("7. Xoa phan tu khoi mang");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -39,10 +41,14 @@ public class Main {
                     System.out.println("f = " + convertCelsius(f));
                     break;
                 case 6:
-                    int arr[] = {2,4,5,6,7,8,9};
+                    int arr[] = {2, 4, 5, 6, 7, 8, 9};
                     int index = findMin(arr);
-                    System.out.println("Min = "+ arr[index]);
+                    System.out.println("Min = " + arr[index]);
                     break;
+                case 7:
+                    delete();
+                    break;
+
                 case 0:
                     System.exit(0);
 
@@ -152,13 +158,43 @@ public class Main {
         return celsius;
     }
 
-    public static int findMin(int[] array){
+    public static int findMin(int[] array) {
         int index = 0;
-        for (int i=0;i<array.length;i++){
-            if (array[i]<array[index]){
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] < array[index]) {
                 index = i;
             }
         }
         return index;
     }
+
+    public static void delete() {
+        int arr[] = {3, 4, 5, 6, 7, 8, 9};
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number delete");
+        int input = scanner.nextInt();
+        int delIndex = -1;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] == input) {
+                delIndex = i;
+                arr[i] = 0;
+            }
+        }
+        if (delIndex != -1) {
+            for (int i = delIndex; i < arr.length - 1; i++) {
+                int temp = arr[i];
+                arr[i] = arr[i + 1];
+                arr[i + 1] = temp;
+            }
+            System.out.println("New Array: ");
+          for (int j =0; j<arr.length -1;j++){
+              System.out.print(arr[j] +"\t");
+          }
+        } else {
+            System.out.println(input + " is not an element of array");
+        }
+    }
+
 }
+
+
