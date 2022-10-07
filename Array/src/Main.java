@@ -10,6 +10,8 @@ public class Main {
             System.out.println("1. Dao nguoc phan tu");
             System.out.println("2. Tim gia tri trong mang");
             System.out.println("3. Tim gia tri lon nhat");
+            System.out.println("4. Chuyen doi C sang F");
+            System.out.println("5. Chuyen doi F sang C");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -24,6 +26,16 @@ public class Main {
                     break;
                 case 3:
                     findMax();
+                    break;
+                case 4:
+                    System.out.println("Enter c: ");
+                    double c = input.nextDouble();
+                    System.out.println("f = "+ convertFahrenheit(c));
+                    break;
+                case 5:
+                    System.out.println("Enter f: ");
+                    double f = input.nextDouble();
+                    System.out.println("f = "+ convertCelsius(f));
                     break;
                 case 0:
                   System.exit(0);
@@ -123,7 +135,15 @@ public class Main {
         System.out.println("\nMax in Array : "+ max);
 
     }
+        public static double convertFahrenheit(double celsius){
+        double fahrenheit = (9.0 / 5) * celsius + 32;
+        return fahrenheit;
+    }
 
+    public  static double convertCelsius(double fahrenheit){
+        double celsius = (5.0 / 9) * (fahrenheit - 32);
+        return celsius;
+    }
 
 
 
