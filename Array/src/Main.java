@@ -6,9 +6,10 @@ public class Main {
         int choice = -1;
         Scanner input = new Scanner(System.in);
         while (choice!=0){
-            System.out.println("Menu");
+            System.out.println("\nMenu");
             System.out.println("1. Dao nguoc phan tu");
             System.out.println("2. Tim gia tri trong mang");
+            System.out.println("3. Tim gia tri lon nhat");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -22,6 +23,7 @@ public class Main {
                         findValueInArray();
                     break;
                 case 3:
+                    findMax();
                     break;
                 case 0:
                   System.exit(0);
@@ -85,6 +87,40 @@ public class Main {
         if (isExit){
             System.out.println("Khong tim thay" + input_name+"trong danh sach");
         }
+
+    }
+
+    public static void findMax(){
+        int size;
+        int[] array;
+        Scanner scanner = new Scanner(System.in);
+        do {
+            System.out.print("Enter a size: ");
+            size = scanner.nextInt();
+            if (size>20){
+                System.out.println("khich thuoc khong duoc vuot qua 20");
+            }
+
+        }while (size>20);
+
+        array = new int[size];
+        int i = 0;
+        while (i< array.length){
+            System.out.print("Enter element " + (i+1)+":");
+            array[i] = scanner.nextInt();
+            i++;
+        }
+        System.out.println("Element in Array: ");
+        for (int j = 0; j< array.length;j++){
+            System.out.printf(+array[j]+"  " );
+        }
+        int max = array[0];
+        for (int j = 1; j<array.length;j++ ){
+            if (array[j] > max){
+                max = array[j];
+            }
+        }
+        System.out.println("\nMax in Array : "+ max);
 
     }
 
