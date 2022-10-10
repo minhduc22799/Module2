@@ -3,7 +3,6 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
         int choice = -1;
         Scanner input = new Scanner(System.in);
         while (choice != 0) {
@@ -15,6 +14,7 @@ public class Main {
             System.out.println("5. Chuyen doi F sang C");
             System.out.println("6. Tim gia tri nho nhat");
             System.out.println("7. Xoa phan tu khoi mang");
+            System.out.println("8. them phan tu vao mang");
             System.out.println("0. Exit");
             System.out.println("Enter your choice: ");
             choice = input.nextInt();
@@ -48,7 +48,9 @@ public class Main {
                 case 7:
                     delete();
                     break;
-
+                case 8:
+                    add();
+                    break;
                 case 0:
                     System.exit(0);
 
@@ -193,6 +195,30 @@ public class Main {
         } else {
             System.out.println(input + " is not an element of array");
         }
+    }
+
+    public static void add(){
+        int arr[] = {1, 2 , 3, 4, 5, 6, 7, 8, 9, 10};
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter number add");
+        int input = scanner.nextInt();
+        System.out.println("Enter index add");
+        int index = scanner.nextInt();
+        if (index<=-1 || arr.length - 1 <index){
+            System.out.println("Khong duoc phep chen vao mang");
+        }else {
+
+            for (int i = index; i<arr.length-1;i++){
+                int temp =arr[i];
+                    arr[i] = arr[i+1];
+                arr[i + 1] = temp;
+                arr[index] = input;
+            }
+        }
+        for (int x: arr) {
+            System.out.print(x+"\t");
+        }
+
     }
 
 }
