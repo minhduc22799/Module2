@@ -1,4 +1,4 @@
-package Model;
+package Shape.Model;
 
 public class Shape {
     private String color = "green";
