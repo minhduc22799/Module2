@@ -1,5 +1,7 @@
 package MoveablePoint;
 
+import java.util.Arrays;
+
 public class MoveAblePoint extends Point {
     private float xSpeed = 0.0f;
     private float ySpeed = 0.0f;
@@ -46,7 +48,7 @@ public class MoveAblePoint extends Point {
 
     @Override
     public String toString() {
-        System.out.println( "speed = " + getXY());
+        System.out.println( "speed = " + Arrays.toString(getXY()));
         return super.toString();
     }
 
