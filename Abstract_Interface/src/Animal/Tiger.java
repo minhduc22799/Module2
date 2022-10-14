@@ -7,4 +7,9 @@ public class Tiger extends Animal {
     public String makeSound() {
         return "Animal.Tiger: Animal.Tiger Animal.Tiger!";
     }
+
+    @Override
+    public String howToEat() {
+        return null;
+    }
 }
