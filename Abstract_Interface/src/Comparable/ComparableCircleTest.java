@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 public class ComparableCircleTest {
     public static void main(String[] args) {
+
         ComparableCircle[] circles = new ComparableCircle[3];
         circles[0] = new ComparableCircle(3.6);
         circles[1] = new ComparableCircle();
@@ -19,5 +20,18 @@ public class ComparableCircleTest {
         for (ComparableCircle x : circles) {
             System.out.println(x);
         }
+
+
+        Circle[] circlesComparator = new Circle[3];
+        circlesComparator[0] = new Circle(4.22);
+        circlesComparator[1] = new Circle();
+        circlesComparator[2] = new Circle(7.6,"blue", false);
+        System.out.println("Pre- sorted");
+        for (Circle x: circlesComparator) {
+            System.out.println(x);
+        }
+
+
+
     }
 }

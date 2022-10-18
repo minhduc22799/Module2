@@ -1,6 +1,6 @@
 package Comparable;
 
-public abstract class Circle {
+public  class Circle {
     private double radius = 2.5f;
     private String color = "red";
     private boolean filled = true;
