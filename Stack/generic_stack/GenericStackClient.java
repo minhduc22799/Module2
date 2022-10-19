@@ -1,3 +1,5 @@
+package generic_stack;
+
 public class GenericStackClient {
     public static void main(String[] args) {
         System.out.println("1. Stack of integers");
