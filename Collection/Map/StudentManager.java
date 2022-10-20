@@ -1,15 +1,12 @@
 package Map;
 
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class StudentManager {
     public static void main(String[] args) {
-        Student student = new Student("a",12,"Hanoi");
-        Student student1 = new Student("b",13,"DaNang");
-        Student student2 = new Student("c",14,"HoChiMinh");
+        Student student = new Student("a",23,"HN") ;
+        Student student1 = new Student("b",24,"HN") ;
+        Student student2 = new Student("c",25,"HN") ;
 
         Map<Integer,Student> studentMap = new HashMap<Integer, Student>();
         studentMap.put(1,student);
@@ -22,7 +19,7 @@ public class StudentManager {
 
         System.out.println("\n-------------------------\n");
 
-        Set<Student> students = new HashSet<Student>();
+        Set<Student> students = new HashSet<>();
         students.add(student1);
         students.add(student2);
         students.add(student);
@@ -30,6 +27,33 @@ public class StudentManager {
         for (Student x: students){
             System.out.println(x.toString());
         }
+
+        System.out.println("\n-------------------------\n");
+
+        Student1 student11 = new Student1("d",12,"HN");
+        Student1 student12 = new Student1("e",10,"HN");
+        Student1 student13 = new Student1("f",11,"HN");
+
+        List<Student1> lists = new ArrayList<>();
+        lists.add(student11);
+        lists.add(student12);
+        lists.add(student13);
+
+        Collections.sort(lists);
+        for (Student1 x: lists) {
+            System.out.println(x.toString());
+        }
+        System.out.println("\n-------------------------\n");
+
+        AgeComparator ageComparator = new AgeComparator();
+        Collections.sort(lists,ageComparator);
+        System.out.println("So sanh theo tuoi");
+        for (Student1 x: lists){
+            System.out.println(x.toString());
+        }
+
+
+
 
     }
 }

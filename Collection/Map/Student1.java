@@ -1,14 +1,14 @@
 package Map;
 
-public  class Student  {
+public class Student1 implements Comparable<Student1>{
     private String name;
     private int age;
     private String address;
 
-    public Student() {
+    public Student1() {
     }
 
-    public Student(String name, int age, String address) {
+    public Student1(String name, int age, String address) {
         this.name = name;
         this.age = age;
         this.address = address;
@@ -40,11 +40,15 @@ public  class Student  {
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student1{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", address='" + address + '\'' +
                 '}';
     }
 
+    @Override
+    public int compareTo(Student1 o) {
+        return this.getName().compareTo(o.getName());
+    }
 }
