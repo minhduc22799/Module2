@@ -1,4 +1,4 @@
-package Map;
+package Map.thuc_hanh;
 
 public  class Student  {
     private String name;

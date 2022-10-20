@@ -1,4 +1,4 @@
-package Map;
+package Map.thuc_hanh;
 
 import java.util.*;
 

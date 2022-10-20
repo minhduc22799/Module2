@@ -1,4 +1,8 @@
-package Map;
+package Map.thuc_hanh;
+
+import Map.thuc_hanh.AgeComparator;
+import Map.thuc_hanh.Student;
+import Map.thuc_hanh.Student1;
 
 import java.util.*;
 

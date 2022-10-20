@@ -1,4 +1,4 @@
-package Map;
+package Map.thuc_hanh;
 
 public class Student1 implements Comparable<Student1>{
     private String name;
