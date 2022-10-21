@@ -1,9 +1,6 @@
 package bai_tap;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.Scanner;
+import java.util.*;
 
 public class ProductManager {
     public static ArrayList<Product> listProduct = new ArrayList<>();
