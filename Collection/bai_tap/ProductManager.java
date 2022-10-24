@@ -10,6 +10,8 @@ public class ProductManager {
         listProduct.add(new Product(2, "Sanpham2", 300));
         listProduct.add(new Product(3, "Sanpham3", 200));
 
+
+
         int choice = -1;
         Scanner input = new Scanner(System.in);
         while(choice != 0) {
@@ -68,6 +70,7 @@ public class ProductManager {
         int price = Integer.parseInt(scanner.nextLine());
         Product product = new Product(id, name, price);
         listProduct.add(product);
+
 
     }
 
