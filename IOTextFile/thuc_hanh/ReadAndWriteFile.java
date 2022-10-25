@@ -44,11 +44,10 @@ public class ReadAndWriteFile {
     }
     public static int findMax(List<Integer> numbers) {
         int max = numbers.get(0);
-        for (int i = 0; i < numbers.size(); i++) {
-            if (max < numbers.get(i)) {
-                max = numbers.get(i);
+        for (Integer number : numbers)
+            if (max < number) {
+                max = number;
             }
-        }
         return max;
     }
 
