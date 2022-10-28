@@ -11,6 +11,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Sort" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Debug" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/IOTextFile" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Thread" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
