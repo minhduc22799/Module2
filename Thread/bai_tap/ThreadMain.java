@@ -11,7 +11,7 @@ public class ThreadMain {
         try {
             thread.join(100);
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
         thread1.start();
     }
